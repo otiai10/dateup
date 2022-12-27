@@ -39,7 +39,7 @@ interface PackageInfo {
     // TODO: --save or --save-dev
 }
 
-async function __fordate__main(args: string[]): Promise<void> {
+async function __dateup__main(args: string[]): Promise<void> {
     // const wd = process.cwd();
     // console.log(wd);
     const dict = await getDeps();
@@ -88,7 +88,7 @@ async function __fordate__main(args: string[]): Promise<void> {
 (async () => {
     if (require.main === module) {
         try {
-            await __fordate__main(process.argv);
+            await __dateup__main(process.argv);
         } catch (err) {
             throw err;
         }
